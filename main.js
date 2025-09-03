@@ -1,0 +1,1 @@
+/* Contains all scripts for index.html: API fetch, chart, login, stats, etc. See previous responses for full content. */

@@ -1,0 +1,13 @@
+.user-login, .leaderboards, .faq, .testimonials {
+  margin: 30px 0;
+  padding: 18px 24px;
+  background: #e3f6ff;
+  border-radius: 18px;
+  box-shadow: 0 2px 8px #b6eaff;
+}
+.avatar { width: 60px; height: 60px; border-radius: 50%; }
+.leaderboard-table { width: 100%; border-collapse: collapse; margin-top: 12px;}
+.leaderboard-table th, .leaderboard-table td { padding: 8px 12px; border-bottom: 1px solid #b6eaff;}
+.faq-list .faq-item { margin-bottom: 12px;}
+.testimonial { background: #fff; border-radius: 12px; margin-bottom: 12px; padding: 12px 18px;}
+.author { color: #2a9fd6; font-weight: bold;}

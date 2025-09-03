@@ -1,0 +1,13 @@
+<section class="user-login">
+  <div id="loginBox">
+    <h2>🔐 Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="loginUser()">Login</button>
+  </div>
+  <div id="profileBox" style="display:none;">
+    <h2>Welcome, <span id="profileName"></span>!</h2>
+    <img id="profileAvatar" class="avatar" src="default-avatar.png">
+    <button onclick="logoutUser()">Logout</button>
+  </div>
+</section>

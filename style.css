@@ -1,0 +1,10 @@
+/* Contains all styles for index, shop, comingsoon pages. See previous responses for full content. */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Baloo 2', Arial, sans-serif;
+  background: linear-gradient(135deg, #5fd6fd 0%, #b6eaff 100%);
+  min-height: 100vh;
+  color: #223a5e;
+}
+/* ...rest of CSS from previous responses... */

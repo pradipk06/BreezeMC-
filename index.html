@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BreezeMC – Where Adventure Never Ends!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="BreezeMC Logo" class="logo" />
+    <nav>
+      <a href="index.html" class="active">Home</a> |
+      <a href="shop.html">Shop</a> |
+      <a href="comingsoon.html">Coming Soon</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Welcome to <span class="logo-text">BreezeMC</span>!</h1>
+      <p class="tagline">Where Adventure Never Ends!</p>
+      <div class="hero-actions">
+        <a href="shop.html" class="cta-btn">Shop Now</a>
+        <a href="#" class="cta-btn join-btn" onclick="copyIP()">Copy Server IP</a>
+      </div>
+      <span class="server-ip">IP: breezemc.or-g.net | Port: 25890</span>
+    </section>
+    <section class="user-login">
+      <div id="loginBox">
+        <h2>🔐 Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="loginUser()">Login</button>
+      </div>
+      <div id="profileBox" style="display:none;">
+        <h2>Welcome, <span id="profileName"></span>!</h2>
+        <img id="profileAvatar" class="avatar" src="default-avatar.png">
+        <button onclick="logoutUser()">Logout</button>
+      </div>
+    </section>
+    <section class="features-animated">
+      <h2>💎 Features You'll Love</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">👾</div>
+          <h3>Mob Head System</h3>
+          <p>Collect rare mob heads, trade & unlock recipes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💖</div>
+          <h3>Lifesteal SMP</h3>
+          <p>Battle, steal hearts, survive—become the champion!</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎮</div>
+          <h3>Mini Games</h3>
+          <p>Competitive, fast-paced games for everyone.</p>
+        </div>
+        <div class="feature-card coming-soon">
+          <div class="feature-icon">⚔️</div>
+          <h3>BedWars & FFA</h3>
+          <p>Ultimate PvP, team fights, and chaos!</p>
+        </div>
+      </div>
+    </section>
+    <section class="server-status">
+      <h2>🌐 Live Server Status</h2>
+      <div id="status-indicator" class="status-indicator online">Online</div>
+      <canvas id="playerChart" width="400" height="120"></canvas>
+      <div class="player-count">
+        <strong>Current Players:</strong> <span id="playerCount">--</span>
+      </div>
+    </section>
+    <section class="latest-news">
+      <h2>📰 Latest News & Events</h2>
+      <div class="news-list" id="newsList"></div>
+    </section>
+    <section class="leaderboards">
+      <h2>🏆 Leaderboards</h2>
+      <table class="leaderboard-table">
+        <thead>
+          <tr><th>#</th><th>Player</th><th>Points</th><th>Wins</th></tr>
+        </thead>
+        <tbody id="leaderboardRows"></tbody>
+      </table>
+    </section>
+    <section class="quick-stats">
+      <h2>📊 BreezeMC Stats</h2>
+      <div class="stats-cards">
+        <div class="stats-card">
+          <span class="stats-value" id="statsOnlinePlayers">--</span>
+          <span class="stats-label">Online Players</span>
+        </div>
+        <div class="stats-card">
+          <span class="stats-value" id="statsRegisteredUsers">--</span>
+          <span class="stats-label">Registered Users</span>
+        </div>
+        <div class="stats-card">
+          <span class="stats-value" id="statsActiveGamemodes">--</span>
+          <span class="stats-label">Active Gamemodes</span>
+        </div>
+        <div class="stats-card">
+          <span class="stats-value" id="statsUptime">--</span>
+          <span class="stats-label">Uptime</span>
+        </div>
+      </div>
+    </section>
+    <section class="faq">
+      <h2>❓ FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h4>How do I join BreezeMC?</h4>
+          <p>Use our IP <b>breezemc.or-g.net:25890</b> in Minecraft Java/Bedrock.</p>
+        </div>
+        <div class="faq-item">
+          <h4>What is Lifesteal SMP?</h4>
+          <p>A game mode where you gain/lose hearts by fighting other players!</p>
+        </div>
+        <div class="faq-item">
+          <h4>How do I buy ranks?</h4>
+          <p>Go to the <a href="shop.html">Shop</a> and use Paytm/PhonePe/UPI!</p>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials">
+      <h2>🌟 Testimonials</h2>
+      <div class="testimonial-list" id="testimonialList">
+        <div class="testimonial">
+          <p>"BreezeMC is the best server I’ve ever played on! The community rocks." <br>
+          <span class="author">- SteveTheMiner</span></p>
+        </div>
+        <div class="testimonial">
+          <p>"Mini games are so fun and competitive!" <br>
+          <span class="author">- CreeperQueen</span></p>
+        </div>
+      </div>
+    </section>
+    <section class="social-links">
+      <h2>🌈 Join the Community</h2>
+      <a class="discord-btn" href="https://discord.gg/yourserver" target="_blank">Join Our Discord</a>
+      <a class="yt-btn" href="https://youtube.com/@breezemc" target="_blank">YouTube</a>
+      <a class="twitter-btn" href="https://twitter.com/breezemc" target="_blank">Twitter</a>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 BreezeMC. All rights reserved.</p>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
